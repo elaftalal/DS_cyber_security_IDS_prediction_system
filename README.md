@@ -124,4 +124,4 @@ The work will be done through Jupyter notebook.
 ## Authors 
 - [@elaftalal](https://github.com/elaftalal)
 - [@MuniraAlzhrani](https://github.com/MuniraAlzhrani)
-- [@](https://github.com/Amoraished)
+- [@sole3](https://github.com/sole3)
