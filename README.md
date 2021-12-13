@@ -1,44 +1,106 @@
-# DS_cyber_security_IDS_prediction_system
-#Classification project
+
+# Classification project
 Data science Project one of core element of T5 Boot camp from SDAIA Academy
-# saudi_stocke_exchange
+## cybersecurity IDS prediction system
 <p align="center" width="100%">
-<img src="https://m.eyeofriyadh.com/news_images/2018/07/9c94765b7e84.jpg" width="550" length="100" style="display: block; margin: 0 auto"/>
+<img src="https://reciprocity.com/wp-content/uploads/2021/06/resource_advanced-persistent-threat-cybersecurity_featured-img_730x270.jpg"/>
 </p>
 
 # Problem Statement
 
-Using data science in the stock market is not new, but that doesn't apply for Saudi Stock Exchange (Tadawul), It needs to be explored and studied deeply, so we can cluster companies based on its behavior during the good and bad days. Also we can identify the days with a very large number of trades and try to understand the reason behind it. Finally we can predict the stocks prices.
+The dataset to be audited was provided which consists of a wide variety of intrusions simulated in a military network environment. It created an environment to acquire raw TCP/IP dump data for a network by simulating a typical US Air Force LAN. The LAN was focused like a real environment and blasted with multiple attacks. A connection is a sequence of TCP packets starting and ending at some time duration between which data flows to and from a source IP address to a target IP address under some well-defined protocol. Also, each connection is labelled as either normal or as an attack with exactly one specific attack type. Each connection record consists of about 100 bytes.
+For each TCP/IP connection, 41 quantitative and qualitative features are obtained from normal and attack data (3 qualitative and 38 quantitative features) .The class variable has two categories:
+• Normal
+• Anomalous
 
 # Dataset
-To achieve the goal of this study the dataset California Housing Prices will be used. This dataset can be found at [Kaggle](https://www.kaggle.com/salwaalzahrani/saudi-stock-exchange-tadawul?select=Tadawul_stcks.csv).
-There is 593820 rows and 12 columns.
+ This dataset can be found at [Kaggle](https://www.kaggle.com/sampadab17/network-intrusion-detection).
+There is 22545 rows and 42 columns.
 
-symbol (Integer): The symbol or the reference number of the company.
-name(String): Name of the company.
-trading_name (String): The trading name of the company.
-sectoer (String): The sector in which the company operates.
-date (Date): The date of the stock price.
-open (Decimal): The opening price.
-high (Decimal): The highest price of the stock at that day.
-low (Decimal): The lowest price of the stock at that day.
-close (Decimal): The closing price.
-change (Decimal): The change in price from the last day.
-perc_Change (Decimal): The percentage of the change.
-volume_traded (Decimal): The volume of the trades for the day.
-value_traded (Decimal): The value of the trades for the day.
-no_trades (Decimal): The number of trades for the day.
+# Data Description
 
-
-The sample of data is shown in the following table:
-
-<table width="100%">
- <tr>
-  <th>trading_name</th><th>sectoer</th><th>date</th><th>open</th><th>high</th><th>low</th><th>close</th><th>change</th><th>perc_Change</th>
- <th>volume_traded</th><th>value_traded</th><th>no_trades</th>
- <tr>
-  <th>SARCO</th><th>Energy</th><th>3/5/2020</th><th>35.55</th><th>35.85</th><th>34.9</th><th>34.9</th><th>-0.4</th><th>-1.13</th><th>436609</th><th>15399073.5</th><th>804</th></table>
-
+ - protocol_type: 
+ Protocol used
+ - service:
+ Service used by destination network
+ - flag:
+ Status of the connection (Error or Normal)
+ - src_bytes:
+ Number of data bytes transferred from source to destination
+ - dst_bytes:
+ Number of data bytes transferred from destination to sourceland**
+ - land:
+ If source and destination port no. and IP addresses are same thenit will set as 1 otherwise 0
+ - wrong_fragment:
+ otal number of wrong fragments in a connection
+ - urgent:  
+ Number of urgent packets (these packets with urgent bit acti-vated)
+ - hot:
+ Number of ’hot’ indicators means entering in a system directory
+ - num_failed_logins:
+ Number of failed login attempts
+ - logged_in:
+ Shows login status (1- successful login, 0- otherwise)
+ - num_compromised:
+ Number of compromised conditions
+ - root_shell:
+ Shows root shell status (1-if root shell obtained otherwise 0)
+ - su_attempted:
+ Set as 1 if ’suroot’ command used otherwise set as 0
+ - num_root:
+ Number of operations performed as root
+ - num_file_creations:
+ Number of file creation operations
+ - num_shells:
+ Number of shell prompts in a connection 
+ - num_access_files:
+ Number of operations on access control files
+ - num_outbound_cmds:
+ Number of outbound commands in a ftp session
+ - is_host_login:  
+ If login as root or admin then this set as 1 otherwise 0
+ - is_guest_login:
+ Set as 1 if login as guest otherwise 0
+ - count:
+ Number of connections to the same destination hos
+ - srv_count:
+ Number of connection to the same service (port number
+ - serror_rate:
+ Percentage of connections that have activated flag (#4) s0,s1,s2or s3, among the connections aggregated in count (#23)
+ - srv_serror_rate: 
+ Percentage of connection that have activated flag (#4) s0,s1,s2 ors3, among the connections aggregated in srvcount (#24)
+ - rerror_rate:
+ Percentage of connections that have activated flag (#4) REJ,among the connections aggregated in count (#23)
+ - srv_rerror_rate:   
+ Percentage of connections that have activated flag (#4) REJ,among the connections aggregated in srvcount (#24
+ - same_srv_rate:
+ Percentage of connections that were to the same services, amongthe connections aggregated in count (#23)
+ - diff_srv_rate :
+ Percentage of connections that were to the different services,among the connections aggregated in count (#23)
+ - srv_diff_host_rate:
+ Percentage of connections that were to different destination ma-chines among the connections aggregated in srvcount (#24)
+ - dst_host_count:
+ Number of connections having the same destination host IP ad-dress
+ - dst_host_srv_count:
+ Number of connections having same port number 
+ - dst_host_same_srv_rate:
+ Percentage of connections that were to the same service amongthe connections aggregated in dsthostcount (#32
+ - dst_host_diff_srv_rate:
+ Percentage of connections that were to different service amongthe connections aggregated in dsthostcount (#32
+ - dst_host_same_src_port_rate:
+ Percentage of connections that were to the same source portamong the connections aggregated in dsthostsrvcount (#33)
+ - dst_host_srv_diff_host_rate:
+ Percentage of connections that were to different service amongthe connections aggregated in dsthostcount (#32
+ - dst_host_serror_rate:
+ Percentage of connections that have activated flag (#4) s0,s1,s2or s3, among the connections aggregated in dsthostcount (#32
+ - dst_host_srv_serror_rate:
+ Percentage of connections that have activated flag (#4) s0,s1,s2or s3, among the connections aggregated in dsthostsrvcount(#33
+ - dst_host_rerror_rate:
+ Percentage of connections that have activated flag (#4) REJ,among the connections aggregated in dsthostcount (#32
+ - dst_host_srv_rerror_rate:
+ Percentage of connections that have activated flag (#4) REJ,among the connections aggregated in dsthostsrvcount (#32)
+ - class:
+ Attack class label
 ## Tools
 There are tools that will be used to achieve the goal of this study, such as: 
 - Numpy
@@ -54,14 +116,12 @@ There are tools that will be used to achieve the goal of this study, such as:
 The work will be done through Jupyter notebook.
 
 ## GOALS
-- predict the stocks prices
-- What is the highest profit section?
-- What is the most valuable year in the Saudi stock market? 
-- What is the less valuable year in the Saudi stock market?
-- What is the percentage change in the sector, and what is the highest sector?
+- What is the most Service used by destination network ?
+- Are activities normal or anomaly ?
+- How many flag based on service?
 
 
 ## Authors 
 - [@elaftalal](https://github.com/elaftalal)
-- [@Alya ALmanqour](https://github.com/Alya11salem)
-- [@Amoraished](https://github.com/Amoraished)
+- [@MuniraAlzhrani](https://github.com/MuniraAlzhrani)
+- [@](https://github.com/Amoraished)
