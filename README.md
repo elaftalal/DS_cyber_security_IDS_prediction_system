@@ -1,7 +1,8 @@
+# Network_Intrusion_Detection-Classification-
 
 # Classification project
 Data science Project one of core element of T5 Boot camp from SDAIA Academy
-## cybersecurity IDS prediction system
+## CyberSecurity IDS prediction system
 <p align="center" width="100%">
 <img src="https://reciprocity.com/wp-content/uploads/2021/06/resource_advanced-persistent-threat-cybersecurity_featured-img_730x270.jpg"/>
 </p>
@@ -14,9 +15,7 @@ For each TCP/IP connection, 41 quantitative and qualitative features are obtaine
 - Anomalous
 
 # Dataset
- This dataset can be found at [Kaggle](https://www.kaggle.com/sampadab17/network-intrusion-detection).
-There is 22545 rows and 42 columns.
-
+There is a large amount of data in this dataset describing a variety of intrusions which are simulated in a military network environment, which was extracted from Kaggle , which contains about 25192 Observations  and 42Features
 # Data Description
 
  - protocol_type: 
@@ -101,6 +100,7 @@ There is 22545 rows and 42 columns.
  Percentage of connections that have activated flag (#4) REJ,among the connections aggregated in dsthostsrvcount (#32)
  - class:
  Attack class label
+
 ## Tools
 There are tools that will be used to achieve the goal of this study, such as: 
 - Numpy
@@ -110,18 +110,17 @@ There are tools that will be used to achieve the goal of this study, such as:
 - math
 - sklearn.preprocessing
 - sklearn.model_selection
-- LinearRegression
-- DecisionTreeRegressor
--  mean_squared_error
 The work will be done through Jupyter notebook.
 
-## GOALS
-- What is the most Service used by destination network ?
-- Are activities normal or anomaly ?
-- How many flag based on service?
 
+
+
+
+## GOALS
+Analysis of Different Classification algorithms for Network Intrusion Detection to accurately predict ' Attack' if the fault is an attack or a normal one.
 
 ## Authors 
+
 - [@elaftalal](https://github.com/elaftalal)
 - [@MuniraAlzhrani](https://github.com/MuniraAlzhrani)
 - [@sole3](https://github.com/sole3)
