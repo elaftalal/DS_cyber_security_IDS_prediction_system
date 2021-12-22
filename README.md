@@ -1,4 +1,4 @@
-# Network_Intrusion_Detection-Classification-
+# Network_Intrusion_Detection_Classification
 
 # Classification project
 Data science Project one of core element of T5 Boot camp from SDAIA Academy
